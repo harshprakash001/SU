@@ -47,8 +47,6 @@
 </body>
 </html> -->
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,6 +74,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            position: relative; /* Ensures positioning for translate widget */
         }
         header h1 {
             font-size: 1.8rem;
@@ -116,13 +115,39 @@
             font-size: 0.9rem;
             color: #666;
         }
+        /* ✅ Google Translate Positioning & Size */
         #google_translate_element {
-            margin-top: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transform: scale(1.2);
+            transform-origin: top right;
+            z-index: 999;
+        }
+        /* ✅ Floating WhatsApp Button */
+        .whatsapp {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 1000;
+        }
+        .whatsapp-float {
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+        .whatsapp-icon {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- ✅ Google Translate Widget -->
+        <div id="google_translate_element"></div>
+
         <header>
             <h1>Celestial Harmony</h1>
             <p>Discover Your Astrological Compatibility</p>
@@ -155,9 +180,9 @@
         <footer>
             <p>&copy; 2025 Celestial Harmony. All rights reserved.</p>
         </footer>
-        <div id="google_translate_element"></div>
     </div>
 
+    <!-- ✅ Google Translate Script -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -169,12 +194,11 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Floating WhatsApp Icon -->
+    <!-- ✅ Floating WhatsApp Icon -->
     <div class="whatsapp">
         <a href="https://wa.me/9838687923" target="_blank" class="whatsapp-float">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-          </a>
-        
+        </a>
     </div>
 </body>
 </html>
