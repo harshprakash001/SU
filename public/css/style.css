@@ -123,6 +123,14 @@ footer {
     object-fit: contain;
 }
 
+
+#google_translate_element {
+    margin-top: 10px; /* Adjust as needed */
+    transform: scale(0.8); /* Adjust the scale to make it smaller */
+    transform-origin: top right; /* Ensure it scales properly */
+}
+
+
 /* Results page styles */
 .results-page .container {
     background-color: rgba(255, 255, 255, 0.95);
