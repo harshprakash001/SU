@@ -67,6 +67,11 @@
             height: auto;
             border-radius: 50%;
         }
+        /* Google Translate Styling */
+        .google-translate-container {
+            text-align: right;
+            padding: 10px;
+        }
     </style>
 </head>
 <body class="results-page">
@@ -74,6 +79,10 @@
         <header>
             <h1>Your Celestial Harmony</h1>
             <p>Astrological Compatibility Results</p>
+            <!-- Google Translate placed in header for better visibility -->
+            <div class="google-translate-container">
+                <div id="google_translate_element"></div>
+            </div>
         </header>
         <main id="results">
             <!-- Results will be dynamically inserted here -->
@@ -91,8 +100,7 @@
     </div>
     <!-- ✅ Moved script to the end -->
     <script defer src="./js/main.js"></script>
-    <!-- ✅ Google Translate (Proper Placement) -->
-    <div id="google_translate_element"></div>
+    <!-- ✅ Google Translate Script -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
